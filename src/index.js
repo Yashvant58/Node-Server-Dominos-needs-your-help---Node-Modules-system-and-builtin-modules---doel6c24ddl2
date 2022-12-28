@@ -3,9 +3,7 @@ var http = require("http");
 const httpServer = http.createServer(handleServer);
 
 function handleServer(req, res) {
-    if(req.url=="/"){
-        res.end("Welcome to Dominos!")
-    }else if(req.url=="/welcome"){
+    if(req.url=="/welcome"){
         res.writeHead(200,{"content-type":"text/plain"});
   res.end("Welcome to Dominos!")
     }else if(req.url=="/contact"){
